@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARATHON // TAU CETI IV — Fan Landing</title>
+  <meta name="description" content="Fan-made landing page for MARATHON — the PvPvE survival extraction FPS by Bungie. Scavenge the lost colony of Tau Ceti IV. Available now on PS5, Xbox Series X|S and PC.">
+
+  <!-- social share cards (URL-independent; safe on any repo/subpath) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MARATHON — Tau Ceti IV">
+  <meta property="og:title" content="MARATHON // TAU CETI IV">
+  <meta property="og:description" content="Scavenge the lost colony of Tau Ceti IV. A PvPvE survival extraction FPS — fan landing.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MARATHON // TAU CETI IV">
+  <meta name="twitter:description" content="Scavenge the lost colony of Tau Ceti IV. A PvPvE survival extraction FPS — fan landing.">
+
+  <!-- preload only the fonts used above the fold; Shapiro (headings) loads on demand via @font-face -->
+  <link rel="preload" href="fonts/Maratype.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/PPFraktionMono-Bold-BF675904a6c4c6e.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23000'/><rect x='3' y='3' width='10' height='10' fill='%23C0FE04'/></svg>">
+</head>
+<body>
+
+  <!-- ATMOSPHERE OVERLAYS -->
+  <div class="fx-noise" aria-hidden="true"></div>
+  <div class="fx-scanlines" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"></div>
+
+  <!-- BOOT SEQUENCE -->
+  <div id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <pre id="boot-log"></pre>
+    </div>
+    <div class="boot-wipe"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#hero" aria-label="Marathon — back to top">
+      <span class="nav-glyph" aria-hidden="true"></span>
+      <span class="nav-word">MARATHON</span>
+      <span class="nav-tag">// FAN SIGNAL</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#about" data-nav="about"><span class="nl-num">01</span>THE COLONY</a>
+      <a href="#world" data-nav="world"><span class="nl-num">02</span>TAU CETI IV</a>
+      <a href="#runners" data-nav="runners"><span class="nl-num">03</span>RUNNERS</a>
+      <a href="#gameplay" data-nav="gameplay"><span class="nl-num">04</span>THE LOOP</a>
+    </nav>
+    <a class="btn btn-acid nav-cta" href="https://store.steampowered.com/app/3065800/Marathon/" target="_blank" rel="noopener">GET THE GAME</a>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-orbit" aria-hidden="true">
+        <svg viewBox="0 0 640 640" class="orbit-svg">
+          <!-- planet -->
+          <circle cx="320" cy="320" r="190" class="o-planet"/>
+          <ellipse cx="320" cy="320" rx="190" ry="64" class="o-lat"/>
+          <ellipse cx="320" cy="320" rx="190" ry="128" class="o-lat"/>
+          <ellipse cx="320" cy="320" rx="64" ry="190" class="o-lat"/>
+          <ellipse cx="320" cy="320" rx="128" ry="190" class="o-lat"/>
+          <!-- anomaly marker -->
+          <g class="o-anomaly">
+            <path d="M 250 388 L 262 368 L 274 388 Z"/>
+            <line x1="262" y1="392" x2="262" y2="428"/>
+            <text x="252" y="444">ANOMALY // 2827</text>
+          </g>
+          <!-- crosshair ticks -->
+          <g class="o-ticks">
+            <line x1="320" y1="88" x2="320" y2="112"/>
+            <line x1="320" y1="528" x2="320" y2="552"/>
+            <line x1="88" y1="320" x2="112" y2="320"/>
+            <line x1="528" y1="320" x2="552" y2="320"/>
+          </g>
+          <!-- orbit + ship -->
+          <g class="o-orbitring">
+            <circle cx="320" cy="320" r="240" class="o-ring"/>
+            <g class="o-ship-rot">
+              <g class="o-ship" transform="translate(320 80)">
+                <rect x="-14" y="-4" width="28" height="8"/>
+                <line x1="18" y1="0" x2="64" y2="0"/>
+                <text x="68" y="4">UESC MARATHON // LOW ORBIT</text>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-inner">
+        <p class="hero-status mono reveal-boot">
+          <span class="blink-dot" aria-hidden="true"></span>
+          STATUS: AVAILABLE NOW&ensp;//&ensp;SEASON 02 — NIGHTFALL
+        </p>
+        <h1 class="hero-title glitch" data-text="MARATHON">MARATHON</h1>
+        <p class="hero-sub reveal-boot">A PVPVE SURVIVAL EXTRACTION FPS<br>FROM THE CREATORS OF <em>HALO</em> AND <em>DESTINY</em></p>
+        <p class="hero-copy reveal-boot">Scavenge the lost colony of Tau Ceti IV. Fight your way to extraction.<br>Come back stronger — or don't come back at all.</p>
+        <div class="hero-cta reveal-boot">
+          <a class="btn btn-acid" href="https://store.steampowered.com/app/3065800/Marathon/" target="_blank" rel="noopener">DEPLOY NOW — $39.99</a>
+          <a class="btn btn-ghost" href="#world">EXPLORE TAU CETI IV</a>
+        </div>
+        <p class="hero-platforms mono reveal-boot">PS5&ensp;//&ensp;XBOX SERIES X|S&ensp;//&ensp;PC — FULL CROSS-PLAY &amp; CROSS-SAVE</p>
+      </div>
+
+      <div class="hero-coords mono" aria-hidden="true">
+        <span>LAT −04.4821 // LON +122.0911</span>
+        <span>ORBITAL SHADOW: UESC MARATHON</span>
+        <span>SOULS UNACCOUNTED FOR: 30,000</span>
+      </div>
+
+      <div class="compass" aria-hidden="true">
+        <div class="compass-track" id="compass-track"></div>
+      </div>
+
+      <div class="marquee hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>SEASON 02 // NIGHTFALL — LIVE NOW&ensp;•&ensp;DARKNESS DESCENDS ON TAU CETI IV&ensp;•&ensp;VAULT BREAKER — PVE ROGUELIKE — 07.21.2026&ensp;•&ensp;SEASON 03 — 09.22.2026&ensp;•&ensp;NO SAFE POCKETS&ensp;•&ensp;</span>
+          <span>SEASON 02 // NIGHTFALL — LIVE NOW&ensp;•&ensp;DARKNESS DESCENDS ON TAU CETI IV&ensp;•&ensp;VAULT BREAKER — PVE ROGUELIKE — 07.21.2026&ensp;•&ensp;SEASON 03 — 09.22.2026&ensp;•&ensp;NO SAFE POCKETS&ensp;•&ensp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 01 // ABOUT ============ -->
+    <section class="sec sec-about" id="about">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-meta mono reveal"><span class="sec-num">01</span><span class="sec-label">// THE LOST COLONY</span><span class="sec-line" aria-hidden="true"></span></div>
+          <h2 class="sec-title reveal-wipe reveal"><span class="txt">A GRAVEYARD<br>OF POSSIBILITIES</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="lede">A massive ghost ship hangs in low orbit over a lost colony on Tau&nbsp;Ceti&nbsp;IV. The 30,000 souls who called this place home have disappeared without a trace. Strange signals hint at mysterious artifacts, long-dormant AI, and troves of untold riches.</p>
+            <p>The year is 2893 — ninety-nine years after the UESC Marathon went dark. Now the perimeter is open, and Runners — bio-cybernetic mercenaries in expendable synthetic shells — drop planetside to strip New Cascadia for salvage, data, and answers.</p>
+            <p>You are one of them. Whatever erased the colony is still down there.<br><strong class="accent">Death hangs above.</strong></p>
+            <div class="about-tags mono">
+              <span class="tag">PVPVE</span>
+              <span class="tag">EXTRACTION FPS</span>
+              <span class="tag">SOLO / DUO / TRIO</span>
+              <span class="tag tag-alert">RESTRICTED ZONE</span>
+            </div>
+          </div>
+
+          <aside class="terminal reveal" aria-label="Recovered colony log">
+            <div class="term-bar mono"><span class="term-dot" aria-hidden="true"></span>RECOVERED LOG // UESC-ARCHIVE-2893 <span class="term-sig">SIG ▓▓▒░</span></div>
+            <pre class="term-body mono" id="term-body" data-autotype></pre>
+          </aside>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-num mono" data-count="2893">0</span><span class="stat-label mono">YEAR OF OPERATION</span></div>
+          <div class="stat"><span class="stat-num mono" data-count="30000" data-comma>0</span><span class="stat-label mono">SOULS MISSING</span></div>
+          <div class="stat"><span class="stat-num mono" data-count="99">0</span><span class="stat-label mono">YEARS OF SILENCE</span></div>
+          <div class="stat"><span class="stat-num mono" data-count="18">0</span><span class="stat-label mono">MAX RUNNERS PER DEPLOY</span></div>
+        </div>
+      </div>
+
+      <div class="marquee divider-marquee" aria-hidden="true">
+        <div class="marquee-track marquee-slow">
+          <span>ESCAPE WILL MAKE ME GOD&ensp;// DURANDAL //&ensp;ESCAPE WILL MAKE ME GOD&ensp;// DURANDAL //&ensp;</span>
+          <span>ESCAPE WILL MAKE ME GOD&ensp;// DURANDAL //&ensp;ESCAPE WILL MAKE ME GOD&ensp;// DURANDAL //&ensp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 // WORLD ============ -->
+    <section class="sec sec-world" id="world">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-meta mono reveal"><span class="sec-num">02</span><span class="sec-label">// TAU CETI IV // SURFACE DATA</span><span class="sec-line" aria-hidden="true"></span></div>
+          <h2 class="sec-title reveal-wipe reveal"><span class="txt">FIVE ZONES.<br>ZERO GUARANTEES.</span></h2>
+          <p class="sec-intro reveal">Tau Ceti IV remains a restricted zone. What's known about its surface comes from fragmented transmissions, recovered field data, and incomplete zone surveys. Deploy at your own risk.</p>
+        </header>
+
+        <div class="zone-grid">
+          <nav class="zone-tabs reveal" role="tablist" aria-label="Zones">
+            <button class="zone-btn is-active" role="tab" aria-selected="true" aria-controls="zone-perimeter" data-target="zone-perimeter"><span class="zb-code mono">ZONE-01</span><span class="zb-name">PERIMETER</span></button>
+            <button class="zone-btn" role="tab" aria-selected="false" aria-controls="zone-diremarsh" data-target="zone-diremarsh"><span class="zb-code mono">ZONE-02</span><span class="zb-name">DIRE MARSH</span></button>
+            <button class="zone-btn" role="tab" aria-selected="false" aria-controls="zone-nightmarsh" data-target="zone-nightmarsh"><span class="zb-code mono">ZONE-02N</span><span class="zb-name">NIGHT MARSH</span><span class="zb-badge mono">S2</span></button>
+            <button class="zone-btn" role="tab" aria-selected="false" aria-controls="zone-outpost" data-target="zone-outpost"><span class="zb-code mono">ZONE-03</span><span class="zb-name">OUTPOST</span></button>
+            <button class="zone-btn" role="tab" aria-selected="false" aria-controls="zone-cryo" data-target="zone-cryo"><span class="zb-code mono">ORBITAL</span><span class="zb-name">CRYO ARCHIVE</span><span class="zb-badge zb-badge-alert mono">ENDGAME</span></button>
+          </nav>
+
+          <div class="zone-panels reveal">
+
+            <article class="zone-panel is-active" id="zone-perimeter" role="tabpanel">
+              <div class="zp-art" aria-hidden="true">
+                <svg viewBox="0 0 520 300">
+                  <line x1="0" y1="228" x2="520" y2="228" class="z-horizon"/>
+                  <path d="M60 228 L84 148 L108 228 Z" class="z-line"/>
+                  <line x1="84" y1="148" x2="84" y2="120" class="z-line"/>
+                  <circle cx="84" cy="114" r="5" class="z-dotline"/>
+                  <path d="M356 228 L376 168 L396 228 Z" class="z-line"/>
+                  <line x1="376" y1="168" x2="376" y2="146" class="z-line"/>
+                  <circle cx="376" cy="140" r="5" class="z-dotline"/>
+                  <rect x="170" y="188" width="72" height="40" class="z-line"/>
+                  <rect x="252" y="204" width="44" height="24" class="z-line"/>
+                  <line x1="262" y1="30" x2="262" y2="228" class="z-datawall"/>
+                  <text x="272" y="44" class="z-text">DATA WALL</text>
+                  <text x="36" y="258" class="z-text">NORTH RELAY</text>
+                  <text x="338" y="258" class="z-text">SOUTH RELAY</text>
+                  <text x="168" y="258" class="z-text">STATION</text>
+                </svg>
+              </div>
+              <div class="zp-body">
+                <h3 class="zp-name">PERIMETER</h3>
+                <p class="zp-flavor">The edge of a dead colony. Silent relay towers and half-swallowed research stations mark humanity's first foothold on Tau Ceti IV — and the first place it started to slip. Open ground, long sightlines, and the teal shimmer of the Data Wall cutting the horizon in two.</p>
+                <dl class="zp-data mono">
+                  <div><dt>CAPACITY</dt><dd>15 RUNNERS // 5 CREWS</dd></div>
+                  <div><dt>ACCESS</dt><dd>OPEN — STARTER ZONE</dd></div>
+                  <div><dt>THREAT</dt><dd><span class="threat"><i style="--t:35%"></i></span>MODERATE</dd></div>
+                  <div><dt>LANDMARKS</dt><dd>NORTH RELAY / STATION / RAVINE / DATA WALL</dd></div>
+                </dl>
+                <p class="zp-note mono">// SEASON 03 ADVISORY: MAJOR ZONE REVAMP INBOUND — 09.22.2026</p>
+              </div>
+            </article>
+
+            <article class="zone-panel" id="zone-diremarsh" role="tabpanel" hidden>
+              <div class="zp-art" aria-hidden="true">
+                <svg viewBox="0 0 520 300">
+                  <path d="M0 240 Q80 226 160 240 T320 240 T520 236" class="z-line"/>
+                  <path d="M0 260 Q90 248 180 260 T380 258 T520 256" class="z-dim"/>
+                  <rect x="150" y="96" width="58" height="30" class="z-line z-float-a"/>
+                  <rect x="300" y="60" width="40" height="22" class="z-line z-float-b"/>
+                  <path d="M382 120 L400 84 L418 120 Z" class="z-line z-float-c"/>
+                  <line x1="179" y1="126" x2="179" y2="240" class="z-dotline"/>
+                  <line x1="320" y1="82" x2="320" y2="240" class="z-dotline"/>
+                  <line x1="400" y1="120" x2="400" y2="238" class="z-dotline"/>
+                  <rect x="52" y="196" width="70" height="44" class="z-line"/>
+                  <text x="52" y="270" class="z-text">BIO-RESEARCH</text>
+                  <text x="286" y="270" class="z-text">SUSPENDED DEBRIS FIELD</text>
+                  <text x="150" y="88" class="z-text">Δ ANOMALY LIFT</text>
+                </svg>
+              </div>
+              <div class="zp-body">
+                <h3 class="zp-name">DIRE MARSH</h3>
+                <p class="zp-flavor">The colony grew its food here, once. Now the marsh grows stranger things. Fog rolls over drowned greenhouses while the Anomaly holds boulders and cargo containers frozen above the water. Physics is only a suggestion in Dire Marsh.</p>
+                <dl class="zp-data mono">
+                  <div><dt>CAPACITY</dt><dd>18 RUNNERS // 6 CREWS</dd></div>
+                  <div><dt>ACCESS</dt><dd>OPEN — HIGH TRAFFIC</dd></div>
+                  <div><dt>THREAT</dt><dd><span class="threat"><i style="--t:60%"></i></span>HIGH</dd></div>
+                  <div><dt>LANDMARKS</dt><dd>ALGAE PONDS / GREENHOUSE / QUARANTINE / AI UPLINK</dd></div>
+                </dl>
+                <p class="zp-note mono">// ANOMALY SURGE EXPECTED ~15 MIN INTO EVERY DEPLOY</p>
+              </div>
+            </article>
+
+            <article class="zone-panel zone-panel-dark" id="zone-nightmarsh" role="tabpanel" hidden>
+              <div class="zp-art" aria-hidden="true">
+                <svg viewBox="0 0 520 300">
+                  <rect x="0" y="0" width="520" height="300" class="z-nightfill"/>
+                  <path d="M0 244 Q80 230 160 244 T320 244 T520 240" class="z-dim"/>
+                  <g class="z-flash">
+                    <path d="M120 190 L300 108 L300 272 Z" class="z-cone"/>
+                    <circle cx="120" cy="190" r="6" class="z-dotline"/>
+                  </g>
+                  <rect x="322" y="120" width="46" height="26" class="z-dim z-float-b"/>
+                  <path d="M420 160 L436 128 L452 160 Z" class="z-dim z-float-c"/>
+                  <text x="118" y="168" class="z-text">FLASHLIGHT — ACTIVE // VISIBLE</text>
+                  <text x="330" y="276" class="z-text z-textdim">CONTACTS: UNKNOWN</text>
+                </svg>
+              </div>
+              <div class="zp-body">
+                <h3 class="zp-name">NIGHT MARSH</h3>
+                <p class="zp-flavor">Same marsh. New rules. When night falls on Tau Ceti IV, familiar routes warp in the dark and long sightlines drown in pitch blackness. Your flashlight is a lifeline and a beacon — every beam you cast tells the dark exactly where you are.</p>
+                <dl class="zp-data mono">
+                  <div><dt>CAPACITY</dt><dd>REDUCED CREWS // NIGHT OPS</dd></div>
+                  <div><dt>ACCESS</dt><dd>ROTATES WITH DIRE MARSH — 90 MIN CYCLE</dd></div>
+                  <div><dt>THREAT</dt><dd><span class="threat"><i style="--t:78%"></i></span>SEVERE</dd></div>
+                  <div><dt>NIGHT KIT</dt><dd>FLASHLIGHTS / VECTOR ROUNDS / FLARES / DARKSIGHT</dd></div>
+                </dl>
+                <p class="zp-note mono">// NEW CONTACT CLASS LOGGED: FROST WARDEN — OBSERVATION LABS</p>
+              </div>
+            </article>
+
+            <article class="zone-panel" id="zone-outpost" role="tabpanel" hidden>
+              <div class="zp-art" aria-hidden="true">
+                <svg viewBox="0 0 520 300">
+                  <line x1="0" y1="252" x2="520" y2="252" class="z-horizon"/>
+                  <g class="z-line">
+                    <path d="M260 252 L260 48"/>
+                    <path d="M260 70 A54 16 0 1 0 260 102"/>
+                    <path d="M260 110 A72 20 0 1 1 260 150"/>
+                    <path d="M260 158 A92 24 0 1 0 260 206"/>
+                  </g>
+                  <rect x="80" y="216" width="76" height="36" class="z-line"/>
+                  <rect x="380" y="224" width="60" height="28" class="z-line"/>
+                  <g class="z-drone"><circle cx="150" cy="120" r="4" class="z-dotline"/><line x1="150" y1="124" x2="150" y2="140" class="z-dotline"/></g>
+                  <g class="z-drone z-drone-b"><circle cx="404" cy="96" r="4" class="z-dotline"/><line x1="404" y1="100" x2="404" y2="116" class="z-dotline"/></g>
+                  <text x="238" y="36" class="z-text">THE PINWHEEL</text>
+                  <text x="70" y="280" class="z-text">AIRFIELD</text>
+                  <text x="368" y="280" class="z-text">DRONE WING</text>
+                </svg>
+              </div>
+              <div class="zp-body">
+                <h3 class="zp-name">OUTPOST</h3>
+                <p class="zp-flavor">The UESC's fortress on a dead world — the one place on Tau Ceti IV where the lights are still on, because the UESC never left. Under storm-black skies the Pinwheel corkscrews into the clouds. Every floor guarded. Every door keyed. Every prize worth dying for.</p>
+                <dl class="zp-data mono">
+                  <div><dt>CAPACITY</dt><dd>12 RUNNERS // 4 CREWS</dd></div>
+                  <div><dt>ACCESS</dt><dd>RUNNER LEVEL 12 — KEYCARD CLEARANCE</dd></div>
+                  <div><dt>THREAT</dt><dd><span class="threat"><i style="--t:70%"></i></span>HIGH</dd></div>
+                  <div><dt>LANDMARKS</dt><dd>THE PINWHEEL / AIRFIELD / COMMAND WING / FLIGHT CONTROL</dd></div>
+                </dl>
+                <p class="zp-note mono">// HEAT CASCADE EVENTS SCORCH TERRAIN — WATCH THE SKY</p>
+              </div>
+            </article>
+
+            <article class="zone-panel" id="zone-cryo" role="tabpanel" hidden>
+              <div class="zp-art" aria-hidden="true">
+                <svg viewBox="0 0 520 300">
+                  <path d="M60 150 L120 96 L430 96 L474 150 L430 204 L120 204 Z" class="z-line"/>
+                  <line x1="120" y1="96" x2="120" y2="204" class="z-dim"/>
+                  <line x1="430" y1="96" x2="430" y2="204" class="z-dim"/>
+                  <g class="z-vaults">
+                    <rect x="150" y="128" width="26" height="26"/>
+                    <rect x="190" y="128" width="26" height="26"/>
+                    <rect x="230" y="128" width="26" height="26"/>
+                    <rect x="270" y="128" width="26" height="26"/>
+                    <rect x="310" y="128" width="26" height="26"/>
+                    <rect x="350" y="128" width="26" height="26"/>
+                    <rect x="270" y="162" width="26" height="26" class="z-vault-hot"/>
+                  </g>
+                  <line x1="0" y1="260" x2="520" y2="260" class="z-dim"/>
+                  <text x="60" y="80" class="z-text">UESC MARATHON — DERELICT // LOW ORBIT</text>
+                  <text x="150" y="240" class="z-text">7 SEALED VAULTS DETECTED</text>
+                  <text x="380" y="284" class="z-text z-textdim">TAU CETI IV ↓</text>
+                </svg>
+              </div>
+              <div class="zp-body">
+                <h3 class="zp-name">CRYO ARCHIVE</h3>
+                <p class="zp-flavor">The ghost ship itself. Frozen vaults, century-old security still running, and something in the machine that has been waiting ninety-nine years for visitors. Bring your endgame build into orbit. The Marathon remembers — and it does not want you to leave.</p>
+                <dl class="zp-data mono">
+                  <div><dt>SCHEDULE</dt><dd>WEEKEND OPERATIONS // THU–SUN</dd></div>
+                  <div><dt>ACCESS</dt><dd>LEVEL 25 + ALL FACTIONS + 5,000-CR LOADOUT</dd></div>
+                  <div><dt>THREAT</dt><dd><span class="threat"><i style="--t:96%"></i></span>MAXIMUM</dd></div>
+                  <div><dt>OBJECTIVE</dt><dd>SIX WINGS / CENTRAL HUB / 7 SEALED VAULTS</dd></div>
+                </dl>
+                <p class="zp-note mono">// 07.21.2026 — VAULT BREAKER: PVE ROGUELIKE OPERATIONS BEGIN</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 // RUNNERS ============ -->
+    <section class="sec sec-runners" id="runners">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-meta mono reveal"><span class="sec-num">03</span><span class="sec-label">// DEATH DEALERS</span><span class="sec-line" aria-hidden="true"></span></div>
+          <h2 class="sec-title reveal-wipe reveal"><span class="txt">CHOOSE<br>YOUR SHELL</span></h2>
+          <p class="triad mono reveal">POWERFUL. CONFIGURABLE. EXPENDABLE.</p>
+          <p class="sec-intro reveal">Runners gave up their human bodies for something better: a digital mind in a biosynthetic shell — built by Sekiguchi Genetics, kept alive by WEAVEworms, replaced when broken. Pick the shell that fits your playstyle. Tune it with shell-specific Cores and universal Implants. Die, re-shell, come back stronger.</p>
+        </header>
+
+        <div class="runner-grid">
+          <nav class="runner-list reveal" role="tablist" aria-label="Runner shells">
+            <button class="runner-btn is-active" role="tab" aria-selected="true" aria-controls="runner-destroyer" data-target="runner-destroyer"><span class="rb-num mono">01</span><span class="rb-name">DESTROYER</span><span class="rb-series mono">SERIES: LOCUS</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-assassin" data-target="runner-assassin"><span class="rb-num mono">02</span><span class="rb-name">ASSASSIN</span><span class="rb-series mono">SERIES: VOID</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-recon" data-target="runner-recon"><span class="rb-num mono">03</span><span class="rb-name">RECON</span><span class="rb-series mono">SERIES: BLACKBIRD</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-vandal" data-target="runner-vandal"><span class="rb-num mono">04</span><span class="rb-name">VANDAL</span><span class="rb-series mono">SERIES: GLITCH</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-thief" data-target="runner-thief"><span class="rb-num mono">05</span><span class="rb-name">THIEF</span><span class="rb-series mono">SERIES: ICON</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-triage" data-target="runner-triage"><span class="rb-num mono">06</span><span class="rb-name">TRIAGE</span><span class="rb-series mono">SERIES: AUX</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-sentinel" data-target="runner-sentinel"><span class="rb-num mono">07</span><span class="rb-name">SENTINEL</span><span class="rb-series mono">SEASON 02</span><span class="rb-badge mono">NEW</span></button>
+            <button class="runner-btn" role="tab" aria-selected="false" aria-controls="runner-rook" data-target="runner-rook"><span class="rb-num mono">08</span><span class="rb-name">ROOK</span><span class="rb-series mono">SCAVENGER FRAME</span><span class="rb-badge rb-badge-alt mono">SOLO</span></button>
+          </nav>
+
+          <div class="runner-panels reveal">
+
+            <article class="runner-panel is-active" id="runner-destroyer" role="tabpanel">
+              <span class="rp-bg" aria-hidden="true">D</span>
+              <div class="rp-head"><span class="rp-num mono">01</span><div><h3 class="rp-name">DESTROYER</h3><p class="rp-meta mono">SERIES: LOCUS // ROLE: FRONTLINE ANCHOR</p></div></div>
+              <p class="rp-flavor">"Hold the line until the line holds you."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>SEARCH AND DESTROY</strong><p>Deal sustained damage to arm shoulder-mounted homing missiles.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>RIOT BARRICADE</strong><p>Deployable energy shield that blocks incoming fire.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>THRUSTER / TACTICAL SPRINT</strong><p>Directional dash boost; trade heat for raw speed.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-assassin" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">A</span>
+              <div class="rp-head"><span class="rp-num mono">02</span><div><h3 class="rp-name">ASSASSIN</h3><p class="rp-meta mono">SERIES: VOID // ROLE: STEALTH FLANKER</p></div></div>
+              <p class="rp-flavor">"If you saw them, they wanted you to."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>SMOKE SCREEN</strong><p>Throw a smoke disc that cuts a wall of cover across the field.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>ACTIVE CAMO</strong><p>Temporary invisibility. Breaks when you attack or take damage.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>SHADOW DIVE / SHROUD</strong><p>Deploy smoke from the air; auto-cloak while inside it.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-recon" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">R</span>
+              <div class="rp-head"><span class="rp-num mono">03</span><div><h3 class="rp-name">RECON</h3><p class="rp-meta mono">SERIES: BLACKBIRD // ROLE: INTEL TRACKER</p></div></div>
+              <p class="rp-flavor">"Nothing moves on Tau Ceti without being logged."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>ECHO PULSE</strong><p>Sonar pulses reveal the position of nearby hostiles.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>TRACKER DRONE</strong><p>A microbot that locks on, chases, and detonates.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>INTERROGATION / STALKER PROTOCOL</strong><p>Finishers ping the victim's crew; cracked shields leave trails.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-vandal" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">V</span>
+              <div class="rp-head"><span class="rp-num mono">04</span><div><h3 class="rp-name">VANDAL</h3><p class="rp-meta mono">SERIES: GLITCH // ROLE: SKIRMISHER — DISRUPTOR</p></div></div>
+              <p class="rp-flavor">"Speed is a weapon. Everything else is a mod."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>AMPLIFY</strong><p>Overcharge movement systems: more speed, sharper handling, less heat.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>DISRUPT CANNON</strong><p>Your arm becomes a cannon firing chargeable knockback blasts.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>MICROJETS / POWER SLIDE</strong><p>Extra mid-air jumps; a supercharged extended slide.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-thief" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">T</span>
+              <div class="rp-head"><span class="rp-num mono">05</span><div><h3 class="rp-name">THIEF</h3><p class="rp-meta mono">SERIES: ICON // ROLE: LOOT SPECIALIST</p></div></div>
+              <p class="rp-flavor">"Why fight for loot somebody else already carries?"</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>PICKPOCKET DRONE</strong><p>A piloted drone that steals the rarest item from an enemy's inventory.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>GRAPPLE DEVICE</strong><p>Grappling hook with a hovering anchor for fast repositioning.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>X-RAY VISOR / THE FINER THINGS</strong><p>See high-rarity containers through walls; carry more of everything.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-triage" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">T+</span>
+              <div class="rp-head"><span class="rp-num mono">06</span><div><h3 class="rp-name">TRIAGE</h3><p class="rp-meta mono">SERIES: AUX // ROLE: COMBAT MEDIC</p></div></div>
+              <p class="rp-flavor">"Death is a technical problem. Solvable."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>REBOOT+</strong><p>Electric gauntlets revive a teammate at range — or EMP an enemy.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>MED-DRONE</strong><p>Deployable drone that heals and shields you or your allies.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>SHAREWARE.EXE / BATTERY OVERCHARGE</strong><p>Crew can use your consumables; Volt weapons arc harder.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-sentinel" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">S</span>
+              <div class="rp-head"><span class="rp-num mono">07</span><div><h3 class="rp-name">SENTINEL</h3><p class="rp-meta mono">SEASON 02 // ROLE: AREA DENIAL</p></div></div>
+              <p class="rp-flavor">"Push, and be punished."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">PRIME</span><div><strong>DEFENDER SYSTEM</strong><p>Automated platform that shoots down grenades and missiles; steadies nearby allies' weapons.</p></div></li>
+                <li><span class="ab-type mono">TACTICAL</span><div><strong>SNARE MINE</strong><p>Proximity mine that bursts into immobilizing submunitions.</p></div></li>
+                <li><span class="ab-type ab-trait mono">TRAITS</span><div><strong>PREY TRACKER / CASTLE DOCTRINE</strong><p>Motion radar cone; close-range weapons sharpen as hostiles close in.</p></div></li>
+              </ul>
+            </article>
+
+            <article class="runner-panel" id="runner-rook" role="tabpanel" hidden>
+              <span class="rp-bg" aria-hidden="true">R∅</span>
+              <div class="rp-head"><span class="rp-num mono">08</span><div><h3 class="rp-name">ROOK</h3><p class="rp-meta mono">SCAVENGER FRAME // SOLO OPERATIONS ONLY</p></div></div>
+              <p class="rp-flavor">"Nothing to lose except what you find along the way."</p>
+              <ul class="rp-abilities">
+                <li><span class="ab-type mono">KIT</span><div><strong>SPONSORED KIT</strong><p>Drops into matches already in progress with basic gear. No vault items risked.</p></div></li>
+                <li><span class="ab-type mono">SYSTEMS</span><div><strong>RECUPERATION / SIGNAL MASK</strong><p>Passive self-repair; a holo-disguise that reads as friendly to UESC machines.</p></div></li>
+                <li><span class="ab-type ab-trait mono">LIMITS</span><div><strong>NO FACTION CONTRACTS</strong><p>Loot what you can carry. Rebuild your inventory. Walk away richer.</p></div></li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+
+        <p class="runner-foot mono reveal">// SHELL ≠ SKIN: SERIES MODELS CHANGE LOOK, VOICE AND PERSONALITY — NEVER ABILITIES OR SILHOUETTE</p>
+      </div>
+    </section>
+
+    <!-- ============ 04 // GAMEPLAY ============ -->
+    <section class="sec sec-gameplay" id="gameplay">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-meta mono reveal"><span class="sec-num">04</span><span class="sec-label">// SURVIVE AND THRIVE</span><span class="sec-line" aria-hidden="true"></span></div>
+          <h2 class="sec-title reveal-wipe reveal"><span class="txt">THE LOOP<br>IS THE LAW</span></h2>
+        </header>
+
+        <ol class="loop reveal" id="loop">
+          <li class="loop-step is-active">
+            <span class="ls-num mono">01</span>
+            <svg viewBox="0 0 48 48" class="ls-icon" aria-hidden="true"><path d="M24 6 v22 M24 28 l-9 -9 M24 28 l9 -9"/><path d="M10 36 h28 M14 42 h20"/></svg>
+            <h3 class="ls-name">INFIL</h3>
+            <p>Drop planetside with gear you're willing to lose.</p>
+          </li>
+          <li class="loop-step">
+            <span class="ls-num mono">02</span>
+            <svg viewBox="0 0 48 48" class="ls-icon" aria-hidden="true"><rect x="10" y="18" width="28" height="22"/><path d="M18 18 v-6 h12 v6 M24 26 v6"/></svg>
+            <h3 class="ls-name">SCAVENGE</h3>
+            <p>Loot facilities, crack vaults, run faction contracts.</p>
+          </li>
+          <li class="loop-step">
+            <span class="ls-num mono">03</span>
+            <svg viewBox="0 0 48 48" class="ls-icon" aria-hidden="true"><circle cx="24" cy="24" r="14"/><path d="M24 4 v8 M24 36 v8 M4 24 h8 M36 24 h8"/><circle cx="24" cy="24" r="3"/></svg>
+            <h3 class="ls-name">FIGHT</h3>
+            <p>Rival crews. UESC security frames. Rogue Compilers. Everything hunts.</p>
+          </li>
+          <li class="loop-step">
+            <span class="ls-num mono">04</span>
+            <svg viewBox="0 0 48 48" class="ls-icon" aria-hidden="true"><path d="M24 42 V20 M24 20 l-9 9 M24 20 l9 9" transform="rotate(180 24 27)"/><path d="M10 12 h28 M14 6 h20"/></svg>
+            <h3 class="ls-name">EXFIL</h3>
+            <p>Reach extraction alive. Fill your vault. Or lose it all.</p>
+          </li>
+        </ol>
+
+        <div class="stakes reveal">
+          <div class="stakes-stamp mono" aria-hidden="true">NO SAFE POCKETS</div>
+          <p class="stakes-copy">Everything you carry can be taken. Fail to extract and your loadout stays on Tau Ceti IV — in someone else's backpack. Faction reputation and contract progress survive death. <strong>Your gear doesn't.</strong> Crew up in twos and threes, cut deals over proximity chat, betray them at the exfil — or take on the colony alone.</p>
+        </div>
+
+        <div class="gp-grid">
+          <div class="gp-card reveal">
+            <h3 class="gp-title mono">// EMPLOYERS — SIX FACTIONS</h3>
+            <ul class="faction-list">
+              <li><strong>CYBERACME</strong><span>Salvage logistics. Looting efficiency, inventory, heat control. Your first employer.</span></li>
+              <li><strong>NUCALORIC</strong><span>Agri-survival systems. Hazard resistance, shields, self-revive tech.</span></li>
+              <li><strong>TRAXUS OFFWORLD</strong><span>The most powerful private corporation in human history. Weapon mods, heavy hardware.</span></li>
+              <li><strong>MIDA</strong><span>Banned. Ideological. Explosive. Sabotage contracts, mobility, demolition.</span></li>
+              <li><strong>SEKIGUCHI</strong><span>They build the shells you die in. Health, cores, cooldowns.</span></li>
+              <li><strong>ARACHNE</strong><span>A cult obsessed with the thermodynamics of violence. Kill contracts and spoils.</span></li>
+            </ul>
+          </div>
+
+          <div class="gp-card reveal">
+            <h3 class="gp-title mono">// ARSENAL — 28+ WEAPONS</h3>
+            <p class="gp-copy">Rarity is dynamic: the mods you install define the tier. A gray magnum with a superior barrel isn't gray anymore. Find Schemas in the field to craft what you can't loot.</p>
+            <ul class="rarity-scale mono" aria-label="Weapon rarity tiers">
+              <li class="r-standard"><i></i>STANDARD</li>
+              <li class="r-enhanced"><i></i>ENHANCED</li>
+              <li class="r-deluxe"><i></i>DELUXE</li>
+              <li class="r-superior"><i></i>SUPERIOR</li>
+              <li class="r-prestige"><i></i>PRESTIGE</li>
+            </ul>
+            <p class="gp-copy">Layer it with shell-specific <strong>Cores</strong>, universal <strong>Implants</strong>, and seasonal stat growth through <strong>The Cradle</strong>. Then decide what you're willing to lose.</p>
+          </div>
+
+          <div class="gp-card gp-card-wide reveal">
+            <h3 class="gp-title mono">// LIVE OPERATIONS</h3>
+            <ol class="timeline">
+              <li class="tl-done"><span class="tl-date mono">03.05.2026</span><span class="tl-label">LAUNCH — PS5 / XBOX SERIES X|S / PC</span></li>
+              <li class="tl-done"><span class="tl-date mono">03.20.2026</span><span class="tl-label">CRYO ARCHIVE OPENS + RANKED BETA</span></li>
+              <li class="tl-live"><span class="tl-date mono">06.02.2026</span><span class="tl-label">SEASON 02 — NIGHTFALL <em class="tl-badge mono">LIVE NOW</em></span></li>
+              <li><span class="tl-date mono">07.21.2026</span><span class="tl-label">VAULT BREAKER — PVE ROGUELIKE MODE</span></li>
+              <li><span class="tl-date mono">09.22.2026</span><span class="tl-label">SEASON 03 — PERIMETER REVAMP</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NUCALORIC SUPPLY UNIT — in-world ad break ============ -->
+    <section class="nucal-ad" id="supply" aria-label="NuCaloric ration dispenser — sponsored transmission">
+      <div class="wrap nucal-ad-inner">
+        <div class="nucal-brand">
+          <p class="na-tag">// INCOMING TRANSMISSION — SPONSOR OVERRIDE</p>
+          <h2 class="na-logo">NUCALORIC</h2>
+          <p class="na-sub">AGRI SURVIVAL SYSTEMS // TAU CETI IV</p>
+          <p class="na-slogan">STAY FED<br>OR STAY DEAD</p>
+          <p class="na-blurb">When the colony went dark, NuCaloric kept the lights on in your gut. Field-grade rations engineered for Runners who fully intend to reach exfil. Probably. Complete our contracts. Eat our product. Survive the difference.</p>
+        </div>
+        <div class="nucal-machine">
+          <div class="nm-head"><span>RATION DISPENSER // GAIUS-UNIT</span><span class="nm-count">STOCK <b id="na-idx">01</b> / 06</span></div>
+          <div class="nm-window" id="na-window">
+            <span class="nm-ghost" aria-hidden="true">G</span>
+            <h3 class="nm-name" id="na-name">GREENLOAF</h3>
+            <p class="nm-spec mono" id="na-spec">RESTORES 45 HP // OVER 6S</p>
+            <p class="nm-flavor" id="na-flavor">Compressed marsh algae. Legally classified as food.</p>
+          </div>
+          <button class="btn btn-acid nm-btn" id="na-dispense" type="button">DISPENSE RATION →</button>
+          <p class="nm-legal">NuCaloric™ accepts no liability for gastrointestinal anomalies, involuntary rampancy, or death occurring during extraction. Consume before exfil. Not a substitute for a pulse.</p>
+        </div>
+      </div>
+      <div class="marquee nucal-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>NUCALORIC&ensp;&ensp;&ensp;STAY FED OR STAY DEAD&ensp;&ensp;&ensp;FEED THE FIGHT&ensp;&ensp;&ensp;NOURISH THE RUNNER&ensp;&ensp;&ensp;</span>
+          <span>NUCALORIC&ensp;&ensp;&ensp;STAY FED OR STAY DEAD&ensp;&ensp;&ensp;FEED THE FIGHT&ensp;&ensp;&ensp;NOURISH THE RUNNER&ensp;&ensp;&ensp;</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="marquee footer-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>IN DEATH WE'VE JUST BEGUN&ensp;//&ensp;IN DEATH WE'VE JUST BEGUN&ensp;//&ensp;IN DEATH WE'VE JUST BEGUN&ensp;//&ensp;</span>
+        <span>IN DEATH WE'VE JUST BEGUN&ensp;//&ensp;IN DEATH WE'VE JUST BEGUN&ensp;//&ensp;IN DEATH WE'VE JUST BEGUN&ensp;//&ensp;</span>
+      </div>
+    </div>
+
+    <div class="wrap footer-grid">
+      <div class="f-col">
+        <p class="f-head mono">// DEPLOY</p>
+        <p class="f-big">PS5<br>XBOX SERIES X|S<br>PC — STEAM</p>
+        <p class="mono f-dim">$39.99 STANDARD // $59.99 DELUXE<br>FULL CROSS-PLAY &amp; CROSS-SAVE<br>ESRB TEEN</p>
+      </div>
+      <div class="f-col">
+        <p class="f-head mono">// SIGNAL SOURCES</p>
+        <ul class="f-links">
+          <li><a href="https://marathonthegame.com/" target="_blank" rel="noopener">MARATHONTHEGAME.COM ↗</a></li>
+          <li><a href="https://store.steampowered.com/app/3065800/Marathon/" target="_blank" rel="noopener">STEAM ↗</a></li>
+          <li><a href="https://www.playstation.com/en-us/games/marathon/" target="_blank" rel="noopener">PLAYSTATION ↗</a></li>
+          <li><a href="https://www.bungie.net/" target="_blank" rel="noopener">BUNGIE.NET ↗</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <p class="f-head mono">// TRANSMISSION LOG</p>
+        <p class="mono f-dim">SEASON 02 — NIGHTFALL: LIVE<br>VAULT BREAKER: 07.21.2026<br>SEASON 03: 09.22.2026<br><span class="blink-text">SIGNAL ACTIVE_</span></p>
+      </div>
+    </div>
+
+    <div class="wrap f-legal mono">
+      <p>UNOFFICIAL FAN PROJECT — NOT AFFILIATED WITH OR ENDORSED BY BUNGIE OR SONY INTERACTIVE ENTERTAINMENT.<br>MARATHON™ © BUNGIE, INC. ALL TRADEMARKS ARE PROPERTY OF THEIR RESPECTIVE OWNERS. BUILT 07.02.2026 // TAU CETI RELAY</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=13"></script>
+</body>
+</html>
